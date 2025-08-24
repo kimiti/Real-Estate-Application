@@ -67,6 +67,7 @@ fun PropertyCard(item: Property) {
                     .background(blue)
                     .padding(horizontal = 16.dp, vertical = 6.dp)
             )
+        }
             Column(
                 modifier = Modifier
                     .clip(RoundedCornerShape(30.dp))
@@ -92,10 +93,13 @@ fun PropertyCard(item: Property) {
                         .padding(bottom = 12.dp),
                     horizontalArrangement = Arrangement.SpaceBetween
                 ) {
-
+                    MetaChip(R.drawable.bed, "${item.bed} Bed")
+                    MetaChip(R.drawable.bath, "${item.bed} Bath")
+                    MetaChip(R.drawable.garage, if(item.isGarage) "Car Garage" else "non-car garage")
+                    MetaChip(R.drawable.size, "${item.bed} Bed")
                 }
             }
-        }
+
     }
 }
 
