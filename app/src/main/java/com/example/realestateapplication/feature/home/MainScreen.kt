@@ -36,6 +36,7 @@ fun MainScreen() {
         item{ SearchRow() }
         item { Spacer(modifier = Modifier.height(16.dp)) }
         item { CategoriesRow() }
+        item { Spacer(modifier = Modifier.height(16.dp)) }
         items(items){property -> PropertyCard(property) }
         item { Spacer(modifier = Modifier.height(16.dp)) }
     }
