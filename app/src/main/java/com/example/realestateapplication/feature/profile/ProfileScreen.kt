@@ -18,7 +18,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
@@ -29,6 +28,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.realestateapplication.R
+import com.example.realestateapplication.ui.components.OptionRow
 import com.example.realestateapplication.ui.components.TopBar
 
 @Composable
@@ -84,6 +84,13 @@ fun ProfileScreen(navController: NavController) {
 
         }
         item { Spacer(modifier = Modifier.height(16.dp)) }
+        item { OptionRow("Account Information") }
+        item { OptionRow("Security") }
+        item { OptionRow("Notification") }
+        item { OptionRow("Language") }
+        item { OptionRow("Terms and Conditions") }
+        item { OptionRow("Privacy Policy") }
+        item { Spacer(modifier = Modifier.height(8.dp)) }
     }
 }
 
